@@ -1,3 +1,12 @@
+#有個風險是一開始就打開檔案，若無偵測到檔案會crash
+#所以讀取檔案相關的程式應要加入檢查檔案的功能
+import os #operation system
+if os.path.isfile('products.csv'):
+	print('yeah 找到檔案')
+else:
+	print('找無檔案')
+
+
 #讀取
 products = []
 with open('products.csv', 'r')as f:
